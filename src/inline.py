@@ -83,6 +83,7 @@ def text_to_textnodes(text):
     filter_links = split_nodes_links(filter_images)
     filter_bold = split_nodes_delimiter(filter_links, "**", TextType.BOLD)
     filter_italic = split_nodes_delimiter(filter_bold, "_", TextType.ITALIC)
-    return filter_italic
+    filter_italicalt = split_nodes_delimiter(filter_italic, "*", TextType.ITALIC)
+    return filter_italicalt
 
-    
+
